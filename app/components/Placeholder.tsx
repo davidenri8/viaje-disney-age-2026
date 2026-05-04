@@ -6,7 +6,7 @@ type Props = {
 
 export default function Placeholder({ title, description, items }: Props) {
   return (
-    <div className="card-magic h-full rounded-2xl border border-ink/10 bg-white/70 backdrop-blur-sm p-6 sm:p-8 shadow-[0_1px_0_rgba(11,28,58,0.04)]">
+    <div className="card-soft h-full rounded-2xl border border-ink/8 bg-white p-6 sm:p-8">
       <h3 className="font-display text-2xl text-ink">{title}</h3>
       {description ? (
         <p className="mt-2 text-ink/70 leading-relaxed">{description}</p>
