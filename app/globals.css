@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-cream: #f7f1e3;
+  --color-cream-soft: #fbf6e8;
+  --color-ink: #0b1c3a;
+  --color-ink-soft: #16315e;
+  --color-night: #060f24;
+  --color-gold: #c9a25a;
+  --color-gold-soft: #e3c587;
+  --color-gold-deep: #8a6a2c;
+  --color-rose: #c97a8a;
+  --color-slate: #2b2f4a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--color-cream);
+  --color-foreground: var(--color-ink);
+  --color-cream: var(--color-cream);
+  --color-cream-soft: var(--color-cream-soft);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-night: var(--color-night);
+  --color-gold: var(--color-gold);
+  --color-gold-soft: var(--color-gold-soft);
+  --color-gold-deep: var(--color-gold-deep);
+  --color-rose: var(--color-rose);
+  --color-slate: var(--color-slate);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-playfair);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-feature-settings: "ss01", "cv11";
+}
+
+.font-display {
+  font-family: var(--font-playfair), Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+.starfield {
+  background-color: #060f24;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.85) 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 70% 20%, rgba(255, 255, 255, 0.7) 50%, transparent 51%),
+    radial-gradient(0.8px 0.8px at 40% 70%, rgba(255, 255, 255, 0.6) 50%, transparent 51%),
+    radial-gradient(1px 1px at 85% 65%, rgba(255, 255, 255, 0.7) 50%, transparent 51%),
+    radial-gradient(0.6px 0.6px at 15% 85%, rgba(255, 255, 255, 0.5) 50%, transparent 51%),
+    radial-gradient(1px 1px at 55% 45%, rgba(201, 162, 90, 0.55) 50%, transparent 51%),
+    radial-gradient(0.7px 0.7px at 90% 90%, rgba(255, 255, 255, 0.6) 50%, transparent 51%),
+    radial-gradient(0.9px 0.9px at 10% 50%, rgba(227, 197, 135, 0.5) 50%, transparent 51%),
+    linear-gradient(180deg, #060f24 0%, #0b1c3a 55%, #16315e 100%);
+}
+
+.hero-gradient {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 110%, rgba(201, 162, 90, 0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 20% 20%, rgba(227, 197, 135, 0.18) 0%, transparent 60%),
+    linear-gradient(180deg, #060f24 0%, #0b1c3a 60%, #16315e 100%);
+}
+
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(201, 162, 90, 0.6) 20%,
+    rgba(227, 197, 135, 0.9) 50%,
+    rgba(201, 162, 90, 0.6) 80%,
+    transparent 100%
+  );
 }
